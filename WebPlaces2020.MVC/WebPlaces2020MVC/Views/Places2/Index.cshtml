@@ -1,0 +1,137 @@
+﻿@model IEnumerable<WebPlaces2020.Client.Models.Place>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nom_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vat_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailPro_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FreeText_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Logo_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddrPostalC_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddrCity_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddrCountry_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddrStreet_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddrPostBox_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailPlace_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Site_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Instagram_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Facebook_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Linkedin_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Hours_PLA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Picture_PLA)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vat_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailPro_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FreeText_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Logo_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddrPostalC_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddrCity_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddrCountry_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddrStreet_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddrPostBox_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailPlace_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Site_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Instagram_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Facebook_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Linkedin_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hours_PLA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Picture_PLA)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

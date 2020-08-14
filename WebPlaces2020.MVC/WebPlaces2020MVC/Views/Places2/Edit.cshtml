@@ -1,0 +1,119 @@
+﻿@model WebPlaces2020.Client.Models.Place
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Place</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Nom_PLA" class="control-label"></label>
+                <input asp-for="Nom_PLA" class="form-control" />
+                <span asp-validation-for="Nom_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Vat_PLA" class="control-label"></label>
+                <input asp-for="Vat_PLA" class="form-control" />
+                <span asp-validation-for="Vat_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailPro_PLA" class="control-label"></label>
+                <input asp-for="EmailPro_PLA" class="form-control" />
+                <span asp-validation-for="EmailPro_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FreeText_PLA" class="control-label"></label>
+                <input asp-for="FreeText_PLA" class="form-control" />
+                <span asp-validation-for="FreeText_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Logo_PLA" class="control-label"></label>
+                <input asp-for="Logo_PLA" class="form-control" />
+                <span asp-validation-for="Logo_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddrPostalC_PLA" class="control-label"></label>
+                <input asp-for="AddrPostalC_PLA" class="form-control" />
+                <span asp-validation-for="AddrPostalC_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddrCity_PLA" class="control-label"></label>
+                <input asp-for="AddrCity_PLA" class="form-control" />
+                <span asp-validation-for="AddrCity_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddrCountry_PLA" class="control-label"></label>
+                <input asp-for="AddrCountry_PLA" class="form-control" />
+                <span asp-validation-for="AddrCountry_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddrStreet_PLA" class="control-label"></label>
+                <input asp-for="AddrStreet_PLA" class="form-control" />
+                <span asp-validation-for="AddrStreet_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddrPostBox_PLA" class="control-label"></label>
+                <input asp-for="AddrPostBox_PLA" class="form-control" />
+                <span asp-validation-for="AddrPostBox_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone_PLA" class="control-label"></label>
+                <input asp-for="Phone_PLA" class="form-control" />
+                <span asp-validation-for="Phone_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailPlace_PLA" class="control-label"></label>
+                <input asp-for="EmailPlace_PLA" class="form-control" />
+                <span asp-validation-for="EmailPlace_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Site_PLA" class="control-label"></label>
+                <input asp-for="Site_PLA" class="form-control" />
+                <span asp-validation-for="Site_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Instagram_PLA" class="control-label"></label>
+                <input asp-for="Instagram_PLA" class="form-control" />
+                <span asp-validation-for="Instagram_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Facebook_PLA" class="control-label"></label>
+                <input asp-for="Facebook_PLA" class="form-control" />
+                <span asp-validation-for="Facebook_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Linkedin_PLA" class="control-label"></label>
+                <input asp-for="Linkedin_PLA" class="form-control" />
+                <span asp-validation-for="Linkedin_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hours_PLA" class="control-label"></label>
+                <input asp-for="Hours_PLA" class="form-control" />
+                <span asp-validation-for="Hours_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Picture_PLA" class="control-label"></label>
+                <input asp-for="Picture_PLA" class="form-control" />
+                <span asp-validation-for="Picture_PLA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

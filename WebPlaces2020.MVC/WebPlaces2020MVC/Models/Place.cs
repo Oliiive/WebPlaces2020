@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebPlaces2020.Models
+namespace WebPlaces2020.Client.Models
 {
     public class Place
     {
+
         public long Id { get; set; }
 
         public enum Type_PLA { Bar, NightClub, ConcertHall, StudentCircle }  // enum required
@@ -26,7 +27,7 @@ namespace WebPlaces2020.Models
         public string AddrCity_PLA { get; set; }        // required - 100max
 
         public string AddrCountry_PLA { get; set; }        // required - listederoul
-        
+
         public string AddrStreet_PLA { get; set; }        // required - 100max
 
         public string AddrPostBox_PLA { get; set; }        // required - 20max
@@ -46,12 +47,5 @@ namespace WebPlaces2020.Models
         public string Hours_PLA { get; set; }        // Visualiser
 
         public string Picture_PLA { get; set; }        // max 5 et max 3MB
-
-
-
-
-
-
-
     }
 }

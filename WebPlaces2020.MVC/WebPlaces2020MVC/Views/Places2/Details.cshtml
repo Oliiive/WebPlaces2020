@@ -1,0 +1,126 @@
+﻿@model WebPlaces2020.Client.Models.Place
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Place</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nom_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nom_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Vat_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Vat_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EmailPro_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EmailPro_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FreeText_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FreeText_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Logo_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Logo_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AddrPostalC_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AddrPostalC_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AddrCity_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AddrCity_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AddrCountry_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AddrCountry_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AddrStreet_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AddrStreet_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AddrPostBox_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AddrPostBox_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Phone_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Phone_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EmailPlace_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EmailPlace_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Site_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Site_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Instagram_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Instagram_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Facebook_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Facebook_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Linkedin_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Linkedin_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Hours_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Hours_PLA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Picture_PLA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Picture_PLA)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
