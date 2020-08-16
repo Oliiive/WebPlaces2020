@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using WebPlaces2020.Client.Models;
+using WebPlaces2020.CLI.Models;
 
-namespace WebPlaces2020.Client.Context
+namespace WebPlaces2020.CLI.Context
 {
     public class PlaceContext : DbContext
     {

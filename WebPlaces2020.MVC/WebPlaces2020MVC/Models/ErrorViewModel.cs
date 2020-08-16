@@ -1,6 +1,6 @@
 using System;
 
-namespace WebPlaces2020MVC.Models
+namespace WebPlaces2020.CLI.Models
 {
     public class ErrorViewModel
     {

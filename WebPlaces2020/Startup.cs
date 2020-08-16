@@ -60,6 +60,15 @@ namespace WebPlaces2020
             services.AddIdentityServer()
            .AddInMemoryClients(Enumerable.Empty<Client>())
            .AddInMemoryApiResources(Enumerable.Empty<ApiResource>());
+
+            services.AddAuthentication(defaultScheme: "Bearer")
+     .AddIdentityServerAuthentication(authenticationScheme: "Bearer", configureOptions: options =>
+     {
+         options.Authority = "http://localhost:44325";
+         options.RequireHttpsMetadata = false;
+         options.ApiName = "api1";
+     });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -69,6 +78,8 @@ namespace WebPlaces2020
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseAuthentication();
+
             app.UseSwagger();
             app.UseHttpsRedirection();
 

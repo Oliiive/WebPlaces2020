@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebPlaces2020.API", "WebPlaces2020\WebPlaces2020.API.csproj", "{C272AADA-9D57-41C9-93F9-94DB87360CF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebPlaces2020.Client", "WebPlaces2020.MVC\WebPlaces2020MVC\WebPlaces2020.Client.csproj", "{9B9CE44F-BC70-49A2-9A78-DD75BABA14A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebPlaces2020.CLI", "WebPlaces2020.MVC\WebPlaces2020MVC\WebPlaces2020.CLI.csproj", "{9B9CE44F-BC70-49A2-9A78-DD75BABA14A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

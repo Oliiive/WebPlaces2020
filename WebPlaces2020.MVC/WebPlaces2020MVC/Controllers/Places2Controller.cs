@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using WebPlaces2020.Client.Context;
-using WebPlaces2020.Client.Models;
+using WebPlaces2020.CLI.Context;
+using WebPlaces2020.CLI.Models;
 
-namespace WebPlaces2020.Client.Controllers
+namespace WebPlaces2020.CLI.Controllers
 {
     public class Places2Controller : Controller
     {

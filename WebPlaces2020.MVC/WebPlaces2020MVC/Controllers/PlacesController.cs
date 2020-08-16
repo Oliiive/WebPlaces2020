@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WebPlaces2020.Client.Context;
+using WebPlaces2020.CLI.Context;
 
-namespace WebPlaces2020.Client.Controllers
+namespace WebPlaces2020.CLI.Controllers
 {
     public class PlacesController : Controller
     {
