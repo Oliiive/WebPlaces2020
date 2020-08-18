@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebPlaces2020.API", "WebPla
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebPlaces2020.CLI", "WebPlaces2020.MVC\WebPlaces2020MVC\WebPlaces2020.CLI.csproj", "{9B9CE44F-BC70-49A2-9A78-DD75BABA14A9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumeAPI", "ConsumeAPI\ConsumeAPI.csproj", "{8D6DC19E-F072-4F7B-8D35-D50CAEA5D4F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9B9CE44F-BC70-49A2-9A78-DD75BABA14A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B9CE44F-BC70-49A2-9A78-DD75BABA14A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B9CE44F-BC70-49A2-9A78-DD75BABA14A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D6DC19E-F072-4F7B-8D35-D50CAEA5D4F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D6DC19E-F072-4F7B-8D35-D50CAEA5D4F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D6DC19E-F072-4F7B-8D35-D50CAEA5D4F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D6DC19E-F072-4F7B-8D35-D50CAEA5D4F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

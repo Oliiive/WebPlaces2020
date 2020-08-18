@@ -17,6 +17,10 @@ using WebPlaces2020.CLI.Context;
 using IdentityServer4.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using IdentityServer4;
+using IdentityServer4.Test;
+using System.Security.Claims;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace WebPlaces2020.CLI
 {
@@ -43,6 +47,7 @@ namespace WebPlaces2020.CLI
             services.AddControllersWithViews();
             services.AddTransient<IValidator<Place>, PlaceValidator>();
             services.AddTransient<IValidator<Compte>, AccountValidator>();
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear();
             services
                  .AddIdentityServer()
                  .AddDeveloperSigningCredential()
@@ -64,6 +69,62 @@ namespace WebPlaces2020.CLI
                  }).AddInMemoryApiResources(new List<ApiResource>
                  {
                     new ApiResource("api1", "test api")
+                 })
+                 .AddInMemoryClients(new List<Client>
+                 {
+                    new Client
+                    {
+                        ClientId = "mvcweb",
+                        ClientName = "MVC Web",
+                        AllowedGrantTypes = GrantTypes.HybridAndClientCredentials,
+                        ClientSecrets =
+                        { 
+                            new Secret("secret".Sha256())
+                        },
+                        RedirectUris = { "http://localhost:44325/signin-oidc"},
+                        PostLogoutRedirectUris = { "http://localhost:44325/signout-callback-oidc"},
+                        AllowedScopes = new List<string>
+                        {
+                            IdentityServerConstants.StandardScopes.OpenId,
+                            IdentityServerConstants.StandardScopes.Profile,
+                            "api1"
+                        }
+                    }
+                 }).AddInMemoryApiResources(new List<ApiResource>
+                 {
+                    new ApiResource("api1", "test api")
+                 })
+                 .AddInMemoryIdentityResources(new List<IdentityResource>
+                 { new IdentityResources.OpenId(),
+                 new IdentityResources.Profile(),
+                 })
+                 .AddTestUsers (new List<TestUser>
+                 {
+                new TestUser
+                {
+                    SubjectId = "1",
+                    Username = "user1",
+                    Password = "password",
+
+                    Claims = new[]
+                    {
+                        new Claim("name", "User1"),
+                        new Claim("website", "http://www.ephec.be"),
+                    }
+                },
+                new TestUser
+                {
+                    SubjectId = "2",
+                    Username = "user2",
+                    Password = "password",
+
+                    Claims = new[]
+                    {
+                        new Claim("name", "User2"),
+                        new Claim("website", "http://www.ephec.be"),
+                    }
+                }
+
                  });
 
             services.AddAuthentication(defaultScheme: "Bearer")
@@ -75,6 +136,26 @@ namespace WebPlaces2020.CLI
         });
 
             services.AddMvc(options => options.EnableEndpointRouting = false);
+            services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = "Cookies";
+                options.DefaultChallengeScheme = "oidc";
+            })
+    .AddCookie("Cookies")
+    .AddOpenIdConnect("oidc", options =>
+    {
+        options.SignInScheme = "Cookies";
+
+        options.Authority = "http://localhost:44325";
+        options.RequireHttpsMetadata = false;
+        options.ResponseType = "code id_token";
+        options.GetClaimsFromUserInfoEndpoint = true;
+
+        options.ClientId = "mvcweb";
+        options.ClientSecret = "secret";
+        options.SaveTokens = true;
+        options.Scope.Add("api1");
+    });
 
         }
 
